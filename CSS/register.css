@@ -1,0 +1,79 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgba(0, 0 , 0, 0.6), #050505e1), url('../HTML/imgs/login1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial;
+}
+.clearfix {
+    clear: both;
+}
+.registerbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 440px;
+    transform: translate(-50%, -50%);
+}
+.registerbox h1 {
+    font-size: 40px;
+    border-bottom: 5px solid #00ff00;
+    padding: 10px 0;
+    margin-bottom: 50px;
+    float: left;
+}
+.text-box {
+    width: 100%;
+    border-bottom: 1px solid #00ff00;
+    margin: 10px 0;
+    padding: 10px 0;
+    font-size: 20px;
+}
+.text-box i {
+    font-size: 22px;
+}
+.text-box input {
+    background: none;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 22px;
+}
+.btn {
+    width: 100%;
+    background: #00ff00;
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    padding: 12px 0;
+    border-bottom: 2px solid #00ff00;
+    cursor: pointer;
+    font-weight: 700;
+    outline: none;
+}
+.btn:hover {
+    background: #000;
+} 
+@media (max-width: 1260px) {
+    .registerbox {
+        width: 440px;
+    }
+}
+@media (max-width: 800px) {
+    .registerbox {
+        width: 330px;
+    }
+    body {
+        background: linear-gradient(rgba(0, 0 , 0, 0.6), #050505e1), url('../HTML/imgs/login.jpg');
+        padding: 0;
+        margin: 0;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+}

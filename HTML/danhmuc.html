@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh mục sản phẩm</title>
+    <link rel="icon" href="../HTML/imgs/hi.png" rel="shortcut icon" type="image/x-icon" />
+    <script src="./js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/danhmuc.css">
+    <script src="../HTML/JS/style.js"></script>
+    <script src="../HTML/JS/product.js"></script>
+    <script src="../HTML/JS/danhmuc.js"></script>
+    <link rel="stylesheet" href="../bootstrap/all.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wapper">
+        <header class="header">
+            <div class="navbar">
+                <!-- Nav PC -->
+                <div class="navbar-header">
+                    <ul class="navbar-header1">
+                        <li style="margin: 49px 50px 0 200px;"><img src="./imgs/logo.png" alt=""></li>
+                        <li><a style="color: #f1a347;" href="./page_home.html">TRANG CHỦ</a></li>
+                        <li class="navbar-header2-has-product" style=" position: relative;">
+                            <a href="#">
+                                SẢN PHẨM
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="product">
+                                <li><a style="top: 10px;" href="#">Đầm váy</a></li>
+                                <li><a style="top: 66px;" href="#">Áo</a></li>
+                                <li><a style="top: 122px;" href="#">Quần</a></li>
+                                <li><a style="top: 180px;" href="#">Set bộ</a></li>
+                                <li><a style="top: 232px;" href="#">Giày dép</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#container-news">TIN TỨC</a></li>
+                        <li><a href="#contact">LIÊN HỆ</a></li>
+                    </ul>
+                    <ul class="navbar-header2">
+                        <li class="navbar-header2-has-search" style="position: relative;">
+                            <a href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <ul class="header-search">
+                                <li style="margin: 0;">
+                                    <input type="search" placeholder="Nhập để tìm kiếm ...">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-header2-has-form" style="position: relative;">
+                            <a href="#"><i class="far fa-user"></i></a>
+                            <ul class="form-log">
+                                <li style="top: -46px;">
+                                    <a style="top: 10px;" href="register.html">Đăng ký</a>
+                                </li>
+                                <li style="right: -24px; top: -16px;"> 
+                                    <a style="top: 42px;" href="login.html">Đăng nhập</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-header2-has-cart" style="margin: 56px 200px 0 0; position: relative;">
+                            <a href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count_item">0</span>
+                            </a>
+                            <ul class="header-cart">
+                                <li>Bạn chưa có sản phẩm nào.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav_mobile">
+                    <div class="nav-header">
+                        <label for="nav-mobile-input" class="nav__bars-btn">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                        </label>
+                        <input type="checkbox" hidden name="" class="nav__input" id="nav-mobile-input">
+                        <img src="./imgs/logo.png" alt="">
+                        <i class="fas fa-shopping-cart"></i>
+                        <label for="nav-mobile-input" class="nav__overlay">
+
+                        </label>
+                        <div class="nav__mobile">
+                            <label for="nav-mobile-input" class="nav__mobile-close">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                            </label>    
+                            <ul class="nav__mobile-list">
+                                <li class="mobile-item">
+                                    <input type="search" placeholder="Tìm kiếm sản phẩm ...">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                                <li class="mobile-item">
+                                    <i class="far fa-user"></i>
+                                    <a class="form" href="./login.html">Đăng ký</a>
+                                    <p>/</p>
+                                    <a class="form1" href="./register.html">Đăng nhập</a>
+                                </li>
+                                <li class="mobile-item">
+                                    <select name="" id="">
+                                        <option value="">Sản phẩm</option>
+                                        <option value="">Đầm váy</option>
+                                        <option value="">Áo</option>
+                                        <option value="">Quần</option>
+                                        <option value="">Set bộ</option>
+                                        <option value="">Giày dép</option>
+                                    </select>
+                                </li>
+                                <li class="mobile-item">
+                                    <a href="#container-news">Tin tức</a>
+                                </li>
+                                <li class="mobile-item">
+                                    <a href="#contact">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+            </div>  
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row" style="margin-bottom: 40px;">
+                        <div class="col-lg-7">
+                            <h3 class="h3-danhmuc">ĐẦM - VÁY</h3>
+                        </div>
+                        <div class="col-lg-5 danhmuc">
+                            <p>Sắp xếp theo:</p>
+                            <select class="select-1">
+                                <option class="option-1" value="default">Mặc định</option>
+                                <option class="option-1" value="manual">Sản phẩm nổi bật</option>
+                                <option class="option-1" value="price-asc">Giá: Tăng dần</option>
+                                <option class="option-1" value="price-desc">Giá: Giảm dần</option>
+                                <option class="option-1" value="alpha-asc">Tên: A-Z</option>
+                                <option class="option-1" value="alpha-desc">Tên: Z-A</option>
+                                <option class="option-1" value="created-desc">Mới nhất</option>
+                                <option class="option-1" value="created-asc">Cũ nhất</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-1.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4726<p>
+                                <h5>880.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-2.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4690<p>
+                                <h5>580.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-3.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4426<p>
+                                <h5>650.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-7.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4589<p>
+                                <h5>850.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-8.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4721<p>
+                                <h5>680.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-9.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4677<p>
+                                <h5>580.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-4.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4720</p>
+                                <h5>550.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div  class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-5.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4517<p>
+                                <h5>1.350.000₫</h5>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6-col col-sm-6 col-xs-12">
+                            <div  class="danhmuc-desc">
+                                <img class="danhmuc-img" src="../HTML/imgs/img-danhmuc-6.jpg" alt="">
+                            </div>
+                            <div class="img-dm">
+                                <p>VÁY lIỀN V4574<p>
+                                <h5>1.300.000₫</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="sroll-top">
+                        <ul class="product-category">
+                            <li class="category-1">
+                                <a class="a-1" href="#">Khoảng giá</a>
+                                <i class="fa fa-angle-right active"></i>
+                            </li>
+                            <li class="category-2">
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box">
+                                    <label for="check-box" >Dưới 300.000₫</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box1">
+                                    <label for="check-box1">300.000₫ - 500.000₫</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box2">
+                                    <label for="check-box2">500.000₫ - 1.000.000₫</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box3">
+                                    <label for="check-box3">Trên 1.000.000₫</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="product-category">
+                            <li class="category-1">
+                                <a class="a-2" href="#">Kích cỡ</a>
+                                <i style="top: 206px" class="fa fa-angle-right"></i>
+                            </li>
+                            <li class="category-2" style="display: flex; justify-content: space-between;">
+                                <div>
+                                    <div class="category-item">
+                                        <input type="checkbox" name="" id="check-box4">
+                                        <label for="check-box4">XS</label>
+                                    </div>
+                                    <div class="category-item">
+                                        <input type="checkbox" name="" id="check-box5">
+                                        <label for="check-box5">S</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="category-item">
+                                        <input type="checkbox" name="" id="check-box6">
+                                        <label for="check-box6">M</label>
+                                    </div>
+                                    <div class="category-item">
+                                        <input type="checkbox" name="" id="check-box7">
+                                        <label for="check-box7">L</label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="category-item">
+                                        <input type="checkbox" name="" id="check-box8">
+                                        <label for="check-box8">XL</label>
+                                    </div>
+                                    <div class="category-item">
+                                        <input type="checkbox" name="" id="check-box9">
+                                        <label for="check-box9">XXL</label>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="product-category">
+                            <li class="category-1">
+                                <a class="a-3" href="#">Màu sắc</a>
+                                <i style="top: 340px;" class="fa fa-angle-right"></i>
+                            </li>
+                            <li class="category-2">
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box10">
+                                    <label for="check-box10">Xanh biển</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box11">
+                                    <label for="check-box11">Đỏ</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box12">
+                                    <label for="check-box12">Hồng</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box13">
+                                    <label for="check-box13">Vàng</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box14">
+                                    <label for="check-box14">Tím</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box15">
+                                    <label for="check-box15">Đen</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box16">
+                                    <label for="check-box16">Trắng</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box17">
+                                    <label for="check-box17">Nâu</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box18">
+                                    <label for="check-box18">Cam</label>
+                                </div>
+                                <div class="category-item">
+                                    <input type="checkbox" name="" id="check-box19">
+                                    <label for="check-box19">Xanh lá cây</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row" style="padding: 25px 0;">
+                        <div class="col-lg-5">
+                            <h3 class="footer-top-txt">ĐĂNG KÝ NHẬN KHUYẾN MÃI</h3>
+                        </div>
+                        <div class="col-lg-7" style="display: flex;">
+                            <input class="footer-input" type="email" name="" id="" placeholder="Nhập email đăng ký của bạn">
+                            <button class="footer-button">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid-footer">
+                <div class="container" style="margin-top: 0;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-footer-1" style="padding-right: 130px; text-align: right;">
+                            <h4 class="title-menu clicked">
+                                CHÍNH SÁCH HỖ TRỢ
+                            </h4>
+                            <ul class="list-menu toggle-mn">
+						
+                                <li class="li_menu">
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Sản phẩm</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nữ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nam</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Tin tức</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12 ">
+                            <div class="logo_footer" style="text-align: center;">
+                                <a href="#" class="logo-wrapper ">	
+                                    <img src="./imgs/logo.png" alt="">
+                                </a>
+                                <p class="sum_footer">
+                                    Lato giúp bạn bán bất cứ thứ gì. Sự lựa chọn tốt nhất cho khách hàng của Lato
+                                </p>
+                                <div class="social-links">
+                                    <a href="http://facebook.com">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="http://youtube.com">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="http://twitter.com">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="http://instagram.com">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-footer-2" style="padding-left: 130px; text-align: left;">
+                            <h4 class="title-menu clicked">
+                                THÔNG TIN LATO
+                            </h4>
+                            <ul class="list-menu toggle-mn">
+						
+                                <li class="li_menu">
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Sản phẩm</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nữ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nam</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Tin tức</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-footer-bottom copyright clearfix">
+                <div class="container" style="margin-top: 0;">
+                    <div class="row tablet">
+                        <div id="copyright" class="col-lg-12 col-md-12 fot_copyright">
+                            <span class="wsp">
+                                
+                                <span class="mobile">© Bản quyền thuộc về <b>Cafein Team</b> 
+                                    <span class="dash hidden-xs">|</span>
+                                <span class="opacity1">Cung cấp bởi</span>
+                                <a href="#" rel="nofollow" title="Sapo" target="_blank" class="a-Sapo">Sapo</a>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="backtop show" title="Lên đầu trang"><i class="icon-up"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</html>

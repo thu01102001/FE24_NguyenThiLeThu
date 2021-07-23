@@ -1,0 +1,146 @@
+#img-show {
+    width: 400px;
+}
+.product-img ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: -13px;
+    width: 196px;
+}
+.zoomContainer {
+    border: 1px solid #ebebeb;
+    padding: 10px 0;
+}
+.product-img ul li {
+    display: inline;
+}
+.product-img ul li img {
+    width: 96px;
+    height: 122px;
+    margin-bottom: 14px;
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+}
+.product-header h3 {
+    font-size: 22px;
+}
+.product-header h2 {
+    font-size: 28px;
+    margin-top: 16px;
+    border-bottom: 1px solid #d7d7d7;
+    padding-bottom: 20px;
+    color: #f1a347;
+    font-weight: 800;
+    font-family: cursive;
+}
+.input-soluong input {
+    width: 40px;
+    height: 33px;
+    font-weight: bold;
+    margin-right: 12px;
+    background: white;
+    border: 1px solid #cccccc;
+    cursor: pointer;;
+}
+.product-desc a {
+    color: #000;
+    font-weight: 700;
+}
+.product-desc a:hover {
+    color: #000;
+    text-decoration: none;
+}
+.soluong {
+    display: flex;
+}
+.soluong p {
+    margin-right: 50px;
+}
+.sz {
+    color: #777777;
+    font-weight: 700;
+    cursor: pointer;
+}
+.sz:hover {
+    color: #f1a347;
+}
+.size {
+    margin-bottom: 12px;
+    display: flex;
+}
+.size p {
+    margin-right: 38px;
+}
+.cart-product {
+    display: flex;
+    margin-top: 20px;
+}
+.cart-product {
+    background: #f1a347;
+    width: 312px;
+    height: 58px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cart-product:hover {
+    color: white;
+}
+.cart-product img {
+    width: 50px;
+    height: 36px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+.cart-product p {
+    margin-bottom: 0;
+    margin-top: 1px;
+    margin-left: 16px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 58px;
+}
+.lienhe i {
+    background: #f1a347;
+    padding: 11px;
+    border-radius: 50%;
+}
+.lienhe a {
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    font-family: cursive;
+}
+.lienhe a:hover {
+    text-decoration: none;
+    color: #000;
+}
+.thongtinsp {
+    margin-top: 40px;
+}
+.thongtinsp h3 {
+    text-shadow: 2px 2px #ccc;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+.thongtinsp h3:hover {
+    color: #f1a347;
+}
+.thongtin {
+    text-align: center;
+}
+.thongtin img {
+    cursor: pointer;
+    border: 1px solid #f1a347;
+    width: 376px;
+}
+.sptuongtu {
+    text-align: center;
+    margin-top: 40px;
+}
+.navbar-header1 li,
+.navbar-header2 li {
+    z-index: 3;
+}

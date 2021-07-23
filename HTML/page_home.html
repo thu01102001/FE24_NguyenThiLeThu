@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="icon" href="../HTML/imgs/hi.png" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <script src="./JS/style.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="../bootstrap/all.min.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wapper">
+        <header class="header">
+            <div class="navbar">
+                <!-- Nav PC -->
+                <div class="navbar-header">
+                    <ul class="navbar-header1">
+                        <li style="margin: 49px 50px 0 200px;"><img src="./imgs/logo.png" alt=""></li>
+                        <li><a style="color: #f1a347;" href="#">TRANG CHỦ</a></li>
+                        <li class="navbar-header2-has-product" style=" position: relative;">
+                            <a href="#">
+                                SẢN PHẨM
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="product">
+                                <li><a style="top: 10px;" href="./danhmuc.html">Đầm váy</a></li>
+                                <li><a style="top: 66px;" href="#">Áo</a></li>
+                                <li><a style="top: 122px;" href="#">Quần</a></li>
+                                <li><a style="top: 180px;" href="#">Set bộ</a></li>
+                                <li><a style="top: 232px;" href="#">Giày dép</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#container-news">TIN TỨC</a></li>
+                        <li><a href="#contact">LIÊN HỆ</a></li>
+                    </ul>
+                    <ul class="navbar-header2">
+                        <li class="navbar-header2-has-search" style="position: relative;">
+                            <a href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                            <ul class="header-search">
+                                <li style="margin: 0;">
+                                    <input type="search" placeholder="Nhập để tìm kiếm ...">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-header2-has-form" style="position: relative;">
+                            <a href="#"><i class="far fa-user"></i></a>
+                            <ul class="form-log">
+                                <li style="top: -46px;">
+                                    <a style="top: 10px;" href="register.html">Đăng ký</a>
+                                </li>
+                                <li style="right: -24px; top: -16px;"> 
+                                    <a style="top: 42px;" href="login.html">Đăng nhập</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navbar-header2-has-cart" style="margin: 56px 200px 0 0; position: relative;">
+                            <a href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span class="count_item">0</span>
+                            </a>
+                            <ul class="header-cart">
+                                <li>Bạn chưa có sản phẩm nào.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav_mobile">
+                    <div class="nav-header">
+                        <label for="nav-mobile-input" class="nav__bars-btn">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                        </label>
+                        <input type="checkbox" hidden name="" class="nav__input" id="nav-mobile-input">
+                        <img src="./imgs/logo.png" alt="">
+                        <i class="fas fa-shopping-cart"></i>
+                        <label for="nav-mobile-input" class="nav__overlay">
+
+                        </label>
+                        <div class="nav__mobile">
+                            <label for="nav-mobile-input" class="nav__mobile-close">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+                            </label>    
+                            <ul class="nav__mobile-list">
+                                <li class="mobile-item">
+                                    <input type="search" placeholder="Tìm kiếm sản phẩm ...">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                                <li class="mobile-item">
+                                    <i class="far fa-user"></i>
+                                    <a class="form" href="./login.html">Đăng ký</a>
+                                    <p>/</p>
+                                    <a class="form1" href="./register.html">Đăng nhập</a>
+                                </li>
+                                <li class="mobile-item">
+                                    <select name="" id="">
+                                        <option value="">Sản phẩm</option>
+                                        <option value="">Đầm váy</option>
+                                        <option value="">Áo</option>
+                                        <option value="">Quần</option>
+                                        <option value="">Set bộ</option>
+                                        <option value="">Giày dép</option>
+                                    </select>
+                                </li>
+                                <li class="mobile-item">
+                                    <a href="#container-news">Tin tức</a>
+                                </li>
+                                <li class="mobile-item">
+                                    <a href="#contact">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+            </div>  
+        </header>
+        <div class="slide">
+            <img src="./imgs/slide1.jpg" alt="">
+        </div>
+        <div class="container">
+            <div id="xuhuong">
+                <h1>XU HƯỚNG TÌM KIẾM</h1>
+                <div class="container-product">
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 ">
+                            <img class="img-xh" src="./imgs/img-1.jpg" alt="">
+                            <p class="text-xh" style="margin-left: 7px;">Thời trang nữ</p>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 ">
+                            <img class="img-xh" src="./imgs/img-2.jpg" alt="">
+                            <p class="text-xh" style="margin-left: 14px;">Phụ kiện nữ</p>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 ">
+                            <img class="img-xh" src="./imgs/img-3.jpg" alt="">
+                            <p class="text-xh" style="margin-left: 22px;" >Chân váy</p>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 ">
+                            <img class="img-xh" src="./imgs/img-4.jpg" alt="">
+                            <p class="text-xh" style="margin-left: 46px;">Giày</p>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 ">
+                            <img class="img-xh" src="./imgs/img-5.jpg" alt="">
+                            <p class="text-xh" style="margin-left: 24px;">Đồng hồ</p>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12 ">
+                            <img class="img-xh" src="./imgs/img-6.jpg" alt="">
+                            <p class="text-xh" style="margin-left: 23px;">Áo khoác</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="container-sale">
+                <img src="../HTML/imgs/sale.png" alt="">
+                <h3>DEAL HÔM NAY</h3>
+            </div>
+            <div class="row">
+                <div style="text-align: center;" class=" abc col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <img class="img-sale-off" src="../HTML/imgs/saleoff.jpg" alt="">
+                    <div class="over-lay">
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div class="box" style="display: flex; float: right; font-size: 23px; margin-top: -6px;">
+                        <p style=" margin: 0 6px; background-color: #f1a347; color: white; padding: 6px; border-radius: 7px;" id="p1"></p>
+                        <p style=" margin: 0 6px; ">:</p>
+                        <p style=" margin: 0 6px; background-color: #f1a347; color: white; padding: 6px; border-radius: 7px;" id="p2"></p>
+                        <p style=" margin: 0 6px;">:</p>
+                        <p style=" margin: 0 6px; background-color: #f1a347; color: white; padding: 6px; border-radius: 7px;" id="p3"></p>
+                    </div>
+                
+                    <script>
+                        let s = setInterval(myf, 1000);
+                        let gio = 13
+                        let phut = 21
+                        let giay = 24
+                
+                        function myf(){
+                            if(gio == 0 && phut == 0 && giay == 1){
+                                clearInterval(s);
+                            }
+                            giay--;
+                            if(giay == -1){
+                                giay = 59;
+                                phut -= 1;
+                            }
+                            if(phut == -1){
+                                gio -= 1;
+                                phut = 59;
+                            }
+                            
+                            document.getElementById('p1').innerHTML = gio;
+                            document.getElementById('p2').innerHTML = phut;
+                            document.getElementById('p3').innerHTML = giay;
+                        }
+                    </script>
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="col-ls-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="product-item">
+                                <div class="main-product">
+                                    <a href="./product.html">
+                                        <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="img-desc">
+                                    <p>Quần Blue Skinny jeans nữ</p>
+                                    <h5>568.000₫</h5>
+                                </div>
+                                <div class="over_lay">
+                                    <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                    <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-ls-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="product-item">
+                                <div class="main-product">
+                                    <a href="./product.html">
+                                        <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-8.jpg" alt="">
+                                    </a>
+                                </div>
+                                
+                                <div class="img-desc">
+                                    <p>Áo Jacket nữ Parka</p>
+                                    <h5>569.000₫</h5>
+                                </div>
+                                <div class="over_lay">
+                                    <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                    <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container">
+
+            <div class="cotainer-main-product">
+                <div class="container-main">
+                    <h1>THỜI TRANG NỮ</h1>
+                    <p>Sản phẩm hot và mới nhất của shop</p>
+                </div>
+                <div class="row" style="margin-top: 36px;">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-1.jpg" alt="">
+                                </a>
+                            </div>
+                            <a href="./product.html"></a>
+                            <div class="img-desc">
+                                <p>VÁY LIỀN V4690</p>
+                                <h5>599.000₫</h5>
+                            </div>
+                            <a href="./product.html">
+                            </a>
+                            <div class="over_lay">
+                                <a href="product.html"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%;" class="main-img" src="./imgs/main-img-2.jpg" alt="">
+                                </a>
+                            </div>
+                            
+                            <div class="img-desc">
+                                <p>ÁO A4744</p>
+                                <h5>569.000₫</h5>
+                            </div>
+                            <div class="over_lay">
+                                <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="img-desc">
+                                <p>SET BỘ S4762</p>
+                                <h5>568.000₫</h5>
+                            </div>
+                            <div class="over_lay">
+                                <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="img-desc">
+                                <p>ÁO SƠ MI A4617</p>
+                                <h5>319.000₫</h5>
+                            </div>
+                            <div class="over_lay">
+                                <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-5.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="img-desc">
+                                <p>QUẦN Q4465</p>
+                                <h5>320.000₫</h5>
+                            </div>
+                            <div class="over_lay">
+                                <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-6.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="img-desc">
+                                <p>VÁY LIỀN V4726</p>
+                                <h5>549.000₫</h5>
+                            </div>
+                            <div class="over_lay">
+                                <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-7.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="img-desc">
+                                <p>SET BỘ S4747</p>
+                                <h5>859.000₫</h5>
+                            </div>
+                            <div class="over_lay">
+                                <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="product-item">
+                            <div class="main-product">
+                                <a href="./product.html">
+                                    <img style="width: 100%; height: 100%" class="main-img" src="./imgs/main-img-8.jpg" alt="">
+                                </a>
+                            </div>
+                            
+                            <div class="img-desc">
+                                <p>SET BỘ S4750</p>
+                                <h5>199.000₫</h5>
+                            </div>
+                            <div class="over_lay">
+                                <a href="#"><i title="Xem chi tiết" class="far fa-eye"></i></a>
+                                <a href="#"><i title="Thêm vào giỏ hàng" style="margin-top: 46px;" class="fas fa-shopping-cart"></i></a>                                <br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="container-img">
+                <div id="container-news">
+                    <h3>TIN TỨC</h3>
+                    <p>Cập nhật tin tức thời trang mới nhất diễn ra trong tuần</p>
+                </div>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-img">
+                        <img class="news-img" src="./imgs/news-1.jpg" alt="">
+                        <div class="calendar">
+                            <h2>24</h2>
+                            <span>Tháng 06</span>
+                        </div>
+                        <h4><a href="#">Những tông màu “sánh đôi” hoàn hảo với trang phục xanh navy</a></h4>
+                        <p>CÁC SẮC THÁI XANH DƯƠNG Là gam màu “dễ tính”, xanh navy dễ dàng đồng điệu cùng các tông màu xanh, từ xanh baby ngọt ngào, xanh cobalt cho đến xanh mòng két. Để tạo được hiệu ứng thị giác hoàn hảo cho tổng thể trang phục, bạn nên áp dụng công thức layer và chú ý đến độ đậm nhạt của các sắc thái xanh.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-img">
+                        <img class="news-img" src="./imgs/news-2.jpg" alt="">
+                        <div class="calendar">
+                            <h2>24</h2>
+                            <span>Tháng 06</span>
+                        </div>
+                        <h4><a href="#">Khi các thương hiệu thời trang Việt gặp gỡ và giao thoa</a></h4>
+                        <p>Với dấu ấn thiết kế đậm chất riêng, mỗi thương hiệu thời trang Việt lại mang trong mình một sứ mệnh. Dù được thể hiện khác nhau bằng ngôn ngữ của chất liệu, của màu sắc, họa tiết và phom dáng, tất cả đều là mảnh ghép không thể thiếu làm nên bức tranh thời trang đa sắc của làng mốt Việt.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-img">
+                        <img class="news-img" src="./imgs/news-3.jpg" alt="">
+                        <div class="calendar">
+                            <h2>24</h2>
+                            <span>Tháng 06</span>
+                        </div>
+                        <h4><a href="#">Những dấu ấn thú vị cho thời trang mùa Thu Đông không còn đơn điệu</a></h4>
+                        <p>Những cơn gió mùa Đông thổi qua thành phố, đôi khi gợi nhắc chúng ta về những món đồ vốn đang nằm thu mình nơi góc tủ. Đó có thể là những điểm nhấn dành cho bạn trong tiết trời se lạnh này.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-contact">
+                <div id="contact">
+                    <h3>LIÊN HỆ</h3>
+                </div>
+                <div class="row" style="margin-bottom: 100px;">
+                    <div class="col-md-5">
+                        <img src="./imgs/logo-contact.png" alt="">
+                        <p style="margin-top: 28px;">Liên hệ qua địa chỉ hoặc trực tiếp bằng số điện thoại dưới đây</p>
+                        <p style="margin-bottom: 0; margin-bottom: 0;">
+                            <i style="margin-right: 10px;" class="fas fa-map-marker-alt"></i>
+                            Địa chỉ: Tâng 6 toà nhà Ladeco, 266 Đội Cấn, phường Liễu Giai, Hà Nội
+                        </p>
+                        <br>
+                        <p style="display: flex;">
+                            <i class="fas fa-phone-alt"></i>
+                            <span style="position: absolute; top: 180px; left: 42px; font-size: 19px; font-weight: 700;">1800 6750</span>
+                        </p>
+                        <br>
+                        <p style="margin-top: -14px;">
+                            <i style="margin-right: 10px;" class="fab fa-telegram-plane"></i>
+                            Email: <a class="contact-a">hellocafein@gmail.com</a>
+                        </p>
+                        <br>
+                        <p style="margin-top: -14px; font-weight: 700;">Shop mở cửa từ thứ 2 - thứ 6, thứ 7, chủ nhật (từ 8h00 - 17h30)</p>
+                    </div>
+                    <div class="col-md-1">
+
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="contact-txt">THÔNG TIN LIÊN HỆ</h2>
+                        <p>Để liên hệ và nhận các thông tin khuyến mãi sớm nhất, Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất</p>
+                        <div class="row">
+                            <fieldset class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label>Họ và tên<em>*</em></label>
+                                <input placeholder="Nguyễn Văn An" type="text" class="form-control  form-control-lg" required="" value="" name="contact[Name]">
+                            </fieldset>
+                            <fieldset class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <label>Email<em>*</em></label>
+                                <input placeholder="sapo@gmail.com" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="" id="email1" class="form-control form-control-lg" value="" name="contact[email]">
+                            </fieldset>
+                            <fieldset class="col-lg-12 col-md-12 col-sm-12 col-12">		
+                                <label>Số điện thoại<em>*</em></label>
+                                <input type="number" placeholder="(+84) 3641234567" name="contact[phone]" class="form-control form-control-lg" required="">
+                            </fieldset>
+                            <fieldset style="padding: 0 15px">
+                                <label>Nội dung<em>*</em></label>
+                                <textarea placeholder="Nội dung" name="contact[body]" id="comment" class="form-control content-area form-control-lg" rows="5" required=""></textarea>
+                            </fieldset>
+                            <fieldset style="padding: 0 12px;">
+                                <button class="gui-contact">
+                                    <i style="margin-right: 10px;" class="fab fa-telegram-plane"></i>
+                                    <span style="font-weight: 700;">GỬI LIÊN HỆ</span>
+                                </button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row" style="padding: 25px 0;">
+                        <div class="col-lg-5">
+                            <h3 class="footer-top-txt">ĐĂNG KÝ NHẬN KHUYẾN MÃI</h3>
+                        </div>
+                        <div class="col-lg-7" style="display: flex;">
+                            <input class="footer-input" type="email" name="" id="" placeholder="Nhập email đăng ký của bạn">
+                            <button class="footer-button">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mid-footer">
+                <div class="container" style="margin-top: 0;">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-12 col-footer-1" style="padding-right: 130px; text-align: right;">
+                            <h4 class="title-menu clicked">
+                                CHÍNH SÁCH HỖ TRỢ
+                            </h4>
+                            <ul class="list-menu toggle-mn">
+						
+                                <li class="li_menu">
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Sản phẩm</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nữ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nam</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Tin tức</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-12 ">
+                            <div class="logo_footer" style="text-align: center;">
+                                <a href="#" class="logo-wrapper ">	
+                                    <img src="./imgs/logo.png" alt="">
+                                </a>
+                                <p class="sum_footer">
+                                    Lato giúp bạn bán bất cứ thứ gì. Sự lựa chọn tốt nhất cho khách hàng của Lato
+                                </p>
+                                <div class="social-links">
+                                    <a href="http://facebook.com">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="http://youtube.com">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="http://twitter.com">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a href="http://instagram.com">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 col-footer-2" style="padding-left: 130px; text-align: left;">
+                            <h4 class="title-menu clicked">
+                                THÔNG TIN LATO
+                            </h4>
+                            <ul class="list-menu toggle-mn">
+						
+                                <li class="li_menu">
+                                    <a href="#">Trang chủ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Sản phẩm</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nữ</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Thời trang nam</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Tin tức</a>
+                                </li>
+                                <li class="li_menu">
+                                    <a href="#">Liên hệ</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-footer-bottom copyright clearfix">
+                <div class="container" style="margin-top: 0;">
+                    <div class="row tablet">
+                        <div id="copyright" class="col-lg-12 col-md-12 fot_copyright">
+                            <span class="wsp">
+                                
+                                <span class="mobile">© Bản quyền thuộc về <b>Cafein Team</b> 
+                                    <span class="dash hidden-xs">|</span>
+                                <span class="opacity1">Cung cấp bởi</span>
+                                <a href="#" rel="nofollow" title="Sapo" target="_blank" class="a-Sapo">Sapo</a>
+                            </span>
+                        </div>
+                    </div>
+                    <a href="#" class="backtop show" title="Lên đầu trang"><i class="icon-up"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="backtop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+</html>

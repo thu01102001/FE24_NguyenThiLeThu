@@ -1,0 +1,139 @@
+.h3-danhmuc {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+    color: #ffac4b !important;
+    text-shadow: 2px 2px #ccc;
+}
+.danhmuc{
+    display: flex;
+}
+.danhmuc p {
+    margin-top: 42px;
+    margin-bottom: 0;
+    margin-right: 12px;
+}
+.select-1 {
+    width: 190px;
+    height: 80%;
+    border: 1px solid #0E1C22;
+    padding: 12px 16px;
+    color: #0E1C22;
+    font-size: 16px;
+    margin-top: 22px !important;
+}
+
+.option-1 {
+    background: white;
+}
+.danhmuc-img {
+    width: 100%;
+    cursor: pointer;
+}
+label {
+    font-weight: 400;
+}
+.danhmuc-desc {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    padding: 25px;
+    display: flex;
+}
+.row-1,
+.row-2 {
+    margin-top: 30px;
+}
+.img-dm {
+    text-align: center;
+    margin-top: 10px;
+}
+.img-dm p:hover {
+    color: #ffac4b;
+    cursor: pointer;
+}
+.img-dm h5 {
+    font-weight: 700;
+    margin-top: -12px;
+}
+.category-1,
+.category-2 {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+.category-1 a {
+    color: #ffac4b;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.category-1 a:hover {
+    color: #ffac4b;
+    text-decoration: none;
+}
+.category-1 i {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 20px;
+    text-align: right;
+}
+.category-1 .a-1::before,
+.category-1 .a-2::before,
+.category-1 .a-3::before {
+    content: "";
+    height: 1px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+}
+.category-1 .a-2::before {
+    top: 230px !important;
+}
+.category-1 .a-3::before {
+    top: 366px;
+}
+.category-1 .a-1::after,
+.category-1 .a-2::after,
+.category-1 .a-3::after{
+    content: "";
+    height: 1px;
+    background: #ffac4b;
+    display: block;
+    left: 0;
+    top: 30px;
+    width: 70px;
+    position: absolute;
+}
+.category-1 .a-2::after {
+    top: 230px !important;
+}
+.category-1 .a-3::after {
+    top: 366px;
+}
+.category-item input {
+    margin-right: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.category-item {
+    display: flex;
+}
+.category-item p {
+    margin-bottom: 8px; 
+}
+.category-item {
+    position: relative;
+    right: 0;
+    transition: right linear 0.1s;
+    cursor: pointer;
+}
+.category-item:hover {
+    color: #ffac4b;
+    right: -4px;
+}
